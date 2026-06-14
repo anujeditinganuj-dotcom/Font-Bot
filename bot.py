@@ -29,7 +29,7 @@ class Bot(Client):
             sleep_threshold=15
         )
 
-    async def start(self):
+    async def start(self, **kwargs):
         app = web.AppRunner(await web_server())
         await app.setup()
         try:
