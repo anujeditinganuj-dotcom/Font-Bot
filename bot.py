@@ -38,7 +38,7 @@ class Bot(Client):
         except Exception as e:
             print(f"Web server error: {e}")
 
-        await super().start()
+        await super().start(**kwargs)
         me = await self.get_me()
         print(f"Bot Started as {me.first_name}")
 
